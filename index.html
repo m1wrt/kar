@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosas que amo de ti</title>
+    <style>
+        :root {
+            --bg-color: #fdfaf3;
+            --accent-orange: #d97757;
+            --text-brown: #5d4037;
+            --border-color: #e0d5c1;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-brown);
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Capa negra progresiva */
+        .overlay-scroll {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        header { text-align: center; margin-bottom: 60px; }
+        h1 {
+            font-size: 2.5rem;
+            border: 2px solid var(--text-brown);
+            display: inline-block;
+            padding: 10px 30px;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .section.reverse { flex-direction: row-reverse; }
+
+        .img-container {
+            flex: 1;
+            border: 2px solid var(--accent-orange);
+            padding: 10px;
+            background: white;
+            box-shadow: 8px 8px 0px var(--border-color);
+        }
+
+        .img-container img { width: 100%; display: block; image-rendering: pixelated; }
+
+        .text-container { flex: 1.2; }
+        .text-line {
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 2px dotted var(--accent-orange);
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .banner {
+            width: 100%;
+            border: 2px solid var(--text-brown);
+            margin: 40px 0;
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff5e6, #fde2c4);
+            box-sizing: border-box;
+        }
+
+        /* CONTENIDO FINAL OSCURO */
+        #final-dark-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            text-align: center;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        #final-dark-content img {
+            max-width: 80%;
+            max-height: 60vh;
+            image-rendering: pixelated;
+        }
+
+        /* Espacio extra largo para controlar la transparencia final con calma */
+        .extra-scroll { height: 150vh; }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-weight: bold;
+            color: var(--accent-orange);
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 20px 15px; }
+            h1 { font-size: 1.8rem; }
+            .section, .section.reverse { flex-direction: column; gap: 20px; }
+            .text-container { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay-scroll" id="overlay"></div>
+
+    <!-- IMAGEN FINAL CON TEXTO -->
+    <div id="final-dark-content">
+        <img src="gif/UC7B95_18BCEAACA3C18_001.gif" alt="Nosotros">
+        <p style="color: white; font-style: italic; margin-top: 25px; font-family: serif; font-size: 1.5rem;">
+            Y es sentirme seguro, cada vez que estoy a tu ladito...
+        </p>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Things I love about her</h1>
+        </header>
+
+        <!-- 1. Abrazo -->
+        <div class="section">
+            <div class="img-container">
+                <img src="gif/1C7B95_18BCE974E5418_001.gif" alt="Abrazo">
+            </div>
+            <div class="text-container">
+                <div class="text-line">Amo esa emocion que me haces sentir cada vez que vas corriendo a abrazarme despues de tiempo sin vernos</div>
+            </div>
+        </div>
+
+        <!-- 2. Música -->
+        <div class="section reverse">
+            <div class="img-container">
+                <img src="gif/0C7B95_18BCE748E8E62_001.gif" alt="Música">
+            </div>
+            <div class="text-container">
+                <div class="text-line">Amo que siempre me pongas nervioso y a la vez muy feliz cada que me volteas a ver <3</div>
+            </div>
+        </div>
+
+        <!-- 3. Pelo Rizado -->
+        <div class="section">
+            <div class="img-container">
+                <img src="gif/5C7B95_18AFBCFFCB492_001.gif" alt="Pelo">
+            </div>
+            <div class="text-container">
+                <div class="text-line">Amo cada vez que reimos juntos, pues para mi, tu felicidad y confort siempre será lo mas importante en mi mundooo</div>
+            </div>
+        </div>
+
+        <!-- 4. Miradas -->
+        <div class="section reverse">
+            <div class="img-container">
+                <img src="gif/JC7B95_18AFD7308A7CA_001.gif" alt="Miradas">
+            </div>
+            <div class="text-container">
+                <div class="text-line">Amo admirar tu belleza, podria decirte que amo lo linda que eres, pero realmente, yo amo cada cosita de tiii por separado, ya q esas cositas siempre t harán unica a mis ojosss <3  </div>
+            </div>
+        </div>
+
+        <!-- 5. Aroma -->
+        <div class="section">
+            <div class="img-container">
+                <img src="gif/LC7B95_18BD382C9BF8C_000.gif" alt="Olor">
+            </div>
+            <div class="text-container">
+                <div class="text-line">Adoro cuando me intentas hacer molestar, ya que cada vez q lo haces, me haces morir de amooor</div>
+            </div>
+        </div>
+
+                <div class="section reverse">
+            <div class="img-container">
+                <img src="gif\1C7B95_18AFC1CA0BF6A_001.gif" alt="Miradas">
+            </div>
+            <div class="text-container">
+                <div class="text-line">Amo buscarte en la música que te gusta, pues no hay cosa mas bonita que pensar que eso, hizo q nos unieramos <3</div>
+            </div>
+        </div>
+
+        <!-- PUNTO DE INICIO DEL OSCURECIMIENTO -->
+        <div class="banner" id="trigger-start">
+            <h2>Pero entre todas esas cosas que amo de ti...</h2>
+            <p>Siempre habrá algo que me hará sentir que lo tengo todo en este mundo...</p>
+        </div>
+
+        </div>
+
+        <footer>
+            Desliza!
+        </footer>
+    </div>
+
+    <div class="extra-scroll"></div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const overlay = document.getElementById('overlay');
+            const finalContent = document.getElementById('final-dark-content');
+            const trigger = document.getElementById('trigger-start');
+            
+            const triggerTop = trigger.offsetTop;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+            if (scrollTop > triggerTop) {
+                let range = scrollHeight - triggerTop;
+                let progress = (scrollTop - triggerTop) / range;
+                
+                // Oscurece el fondo (llegando a negro total a la mitad del tramo oscuro)
+                overlay.style.opacity = Math.min(progress * 2, 1);
+
+                // Controlamos la transparencia del contenido final (GIF + Texto)
+                // Empieza a aparecer suavemente después del 50% del progreso oscuro
+                if (progress > 0.5) {
+                    finalContent.style.visibility = "visible";
+                    // Mapeamos el 50%-100% del scroll al 0-1 de opacidad
+                    let contentOpacity = (progress - 0.5) / 0.5;
+                    finalContent.style.opacity = contentOpacity;
+                } else {
+                    finalContent.style.opacity = "0";
+                    finalContent.style.visibility = "hidden";
+                }
+            } else {
+                overlay.style.opacity = 0;
+                finalContent.style.opacity = "0";
+                finalContent.style.visibility = "hidden";
+            }
+        });
+    </script>
+</body>
+</html>
